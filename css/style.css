@@ -1,0 +1,96 @@
+svg {
+    background: #fff;
+  }
+.node {
+    cursor: pointer;
+}
+
+.overlay{
+    background-color:#EEE;
+}
+.node circle {
+    /*fill: #fff;*/
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+circle.radiusImage{
+
+    stroke:none;
+}
+.node text {
+    font-size:20px;
+    font-family:'Microsoft YaHei';
+}
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+.nodeText {
+    font-size:16px;
+    stroke: #000;
+    stroke-width: 1;
+}
+.node .childText{
+    font-size: 16px;
+    stroke: #000;
+    stroke-width:1;
+}
+.node .phoneText{
+    font-size: 16px;
+    stroke: #000;
+    stroke-width:1;
+}
+.gsText {
+    font-size:20px;
+    stroke-width:2;
+    stroke: #000;
+}
+.node .vk{
+    font-size:16px;
+    stroke:#336699;
+    fill: #336699;
+    stroke-width:1;
+}
+.node .ck{
+    font-size:16px;
+    stroke:#ff3399;
+    fill: #ff3399;
+    stroke-width:1;
+}
+.node .pt{
+    font-size:16px;
+    stroke: #009999;
+    fill: #009999;
+    stroke-width:1;
+}
+.node .gs {
+    font-size:20px;
+    stroke-width:2;
+    stroke: #000;
+
+}
+.node .hhr {
+    font-size: 17px;
+    stroke: #f60;
+    fill: #f60;
+    stroke-width:1;
+}
+.node .jphhr {
+    font-size: 18px;
+    stroke: #E01222;
+    fill: #E01222;
+    stroke-width:1;
+}
+.node .zshhr {
+    font-size: 19px;
+    stroke: #6B1DB9;
+    fill: #6b1db9;
+    stroke-width:1;
+}
+.node .gsgd {
+    font-size: 20px;
+    stroke:gold;
+    fill: gold;
+    stroke-width:1;
+} 
