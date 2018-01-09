@@ -28,7 +28,7 @@ treeJSON = d3.json("js/demo.json", function(error, treeData) {
         if (!parent) return;
 
         visitFn(parent);
-       
+
         var children = childrenFn(parent);
         if (children) {
             var count = children.length; //子节点的个数
@@ -43,7 +43,7 @@ treeJSON = d3.json("js/demo.json", function(error, treeData) {
         // console.log(d);
         totalNodes++; //遍历一个总节点+1
         maxLabelLength = Math.max(d.name.length, maxLabelLength);
-       
+
     }, function(d) {
         return d.children && d.children.length > 0 ? d.children : null;
     });
@@ -95,7 +95,7 @@ treeJSON = d3.json("js/demo.json", function(error, treeData) {
         y = -source.x0;
         //控制根节点的位置
         x = x * scale + viewerWidth / 2;
-        y = /* y * scale + viewerHeight / 2 */0;
+        y = y * scale + viewerHeight / 2;
         d3.select('g').transition()
             .duration(duration)
             .attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
@@ -113,7 +113,7 @@ treeJSON = d3.json("js/demo.json", function(error, treeData) {
             dataType : "json",
             success : function(data) {
                 mynodes = data;
-                
+
                 //nodes = JSON.parse(nodes);
             }
         });
@@ -130,7 +130,7 @@ treeJSON = d3.json("js/demo.json", function(error, treeData) {
             d._children = null;
         }else{
             var mnodes = getNode(uid);
-            
+
            d.children = mnodes;
         }
         return d;
@@ -139,7 +139,7 @@ treeJSON = d3.json("js/demo.json", function(error, treeData) {
     // Toggle children on click. 单击事件
 
     function click(d) {
-        
+
         if (d3.event.defaultPrevented) return; // click suppressed
         d = toggleChildren(d,d.uid);
         update(d);
